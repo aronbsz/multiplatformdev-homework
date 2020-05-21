@@ -96,6 +96,10 @@
                             flex: 0 0 auto;
                             margin: 0;
                         }
+                        .main.row.right .right-pane{
+                            border: solid #aaa;
+                            border-width: 0 0 0 1px;
+                        }
 
                         .conversation-card {
                             cursor: pointer;
@@ -135,11 +139,6 @@
                                 flex: 1;
                             }
                         }
-                        .right-pane .left-pane{
-                            border: solid #aaa;
-                            border-width: 0 0 0 1px;
-                        }
-
                         .right-pane .conversation-header {
                             padding: 6px 8px;
                             font-weight: 500;

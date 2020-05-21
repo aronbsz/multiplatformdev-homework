@@ -30,11 +30,11 @@ class Proxy extends EventProducer<ProxyEventMap>{
                 case "message":
                     let cid = p.channelId;
                     this.inbox!.conversations.find(x => x.channelId === cid)?.lastMessages.push(p.message);
-                    this.dispatch("message");
+                    this.dispatch( "message", cid, p.message );
                     break;
                 case "conversationAdded":
                     this.inbox!.conversations.push(p.conversation);
-                    this.dispatch("conversation");
+                    this.dispatch( "conversation", p.conversation.channelId );
                     break;
             }
         });

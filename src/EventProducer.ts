@@ -1,6 +1,6 @@
 export class EventProducer<M> {
     private listeners: { type: keyof M, listener, obj?: Object }[] = [];
-    addEventListener<K extends keyof M>( type: K, listener: M[ K ], obj?: Object ) {
+    addEventListener<K extends keyof M>( type: K, listener: M[K], obj?: Object ) {
         this.listeners.push({ type, listener, obj });
     }
     removeEventListener<K extends keyof M>(type: K, listener: M[ K ] ) {
