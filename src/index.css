@@ -96,10 +96,7 @@
                             flex: 0 0 auto;
                             margin: 0;
                         }
-                        .main.row.right .right-pane{
-                            border: solid #aaa;
-                            border-width: 0 0 0 1px;
-                        }
+                        
 
                         .conversation-card {
                             cursor: pointer;
@@ -128,6 +125,12 @@
                             white-space: nowrap;
                         }
 
+                        @media not screen and (max-width: 650px) {
+                            .main.row.right .right-pane{
+                            border: solid #aaa;
+                            border-width: 0 0 0 1px;
+                            }
+                        }
                         @media (max-width: 650px) {
                             .left .right-pane {
                                 display: none;
